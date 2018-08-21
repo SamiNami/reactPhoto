@@ -4,7 +4,7 @@ export default function(state = null, action) {
     case FETCH_PHOTOS:
       //   transform the data for the redux store
       const objWithIdAsKey = action.payload.reduce((previous, currentPhoto) => {
-        // pull off the id propery and use it as a key
+        // pull off the id property and use it as a key
         const { id, ...photoNoId } = currentPhoto;
         previous[id] = photoNoId;
         return previous;
