@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 class Landing extends Component {
+  handleRedirect() {
+    this.props.history.push("/photo");
+  }
+
   renderCards(photos) {
     return (
       <div className="row">
@@ -18,12 +22,9 @@ class Landing extends Component {
     return (
       <div key={key} className="col s4 m4">
         <div className="card">
-          <div className="card-image">
+          <div className="card-image" onClick={() => this.handleRedirect()}>
             <img src={thumbnailUrl} />
             <span className="card-title">{title}</span>
-          </div>
-          <div className="card-action">
-            <Link to="/photo">Check Details</Link>
           </div>
         </div>
       </div>
