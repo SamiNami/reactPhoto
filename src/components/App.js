@@ -2,10 +2,9 @@ import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import Header from "./Header";
 import Landing from "./Landing";
+import Photo from "./Photo";
 import { connect } from "react-redux";
 import * as actions from "../actions";
-
-const Photo = () => <h2>Photo</h2>;
 
 class App extends Component {
   componentDidMount() {

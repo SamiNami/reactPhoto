@@ -9,7 +9,7 @@ export default function(state = null, action) {
         previous[id] = photoNoId;
         return previous;
       }, {});
-      return { photos: objWithIdAsKey, activePhoto: undefined };
+      return { photos: objWithIdAsKey, activePhoto: 1 };
 
     case SET_ACTIVE_PHOTO:
       return { ...state, activePhoto: action.payload };

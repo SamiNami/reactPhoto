@@ -1,14 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
 import * as actions from "../actions";
 
 class Landing extends Component {
-  handleRedirect(id) {
-    //   set active picture
-    this.props.setActivePhoto(id);
-    // use async here?
-    // this.props.history.push("/photo");
+  async handleRedirect(id) {
+    await this.props.setActivePhoto(id);
+    this.props.history.push("/photo");
   }
 
   renderCards(photos) {
@@ -44,13 +41,12 @@ class Landing extends Component {
         </div>
       );
     }
-    console.log(photos);
     return this.renderCards(photos.photos);
   }
 }
 
 function mapStateToProps({ photos }) {
-  return { photos };
+  return { photos: photos };
 }
 
 export default connect(
