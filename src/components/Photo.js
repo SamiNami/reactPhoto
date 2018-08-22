@@ -11,13 +11,15 @@ class Photo extends Component {
     const photoData = photos[activePhoto];
     const { title, url } = photoData;
     return (
-      <div key={activePhoto} className="col s8 m8">
-        <div className="card">
-          <div className="card-image">
-            <img src={url} />
-          </div>
-          <div className="card-content">
-            <p>{title}</p>
+      <div className="row">
+        <div key={activePhoto} className="col offset-s2 offset-m2 s8 m8 ">
+          <div className="card">
+            <div className="card-image">
+              <img src={url} />
+            </div>
+            <div className="card-content">
+              <p>{title}</p>
+            </div>
           </div>
         </div>
       </div>

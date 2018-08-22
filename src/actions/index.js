@@ -9,6 +9,5 @@ export const fetchPhotos = () => async dispatch => {
 };
 
 export const setActivePhoto = id => dispatch => {
-  console.log(id);
   dispatch({ type: SET_ACTIVE_PHOTO, payload: id });
 };
