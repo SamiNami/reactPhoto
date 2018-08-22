@@ -10,7 +10,7 @@ This is a training spec for a photo browsing web application. The goal the appli
 
 ## Installation
 
-- clone this repo https://github.com/SamiNami/reactPhoto.git
+- clone this repo: git clone https://github.com/SamiNami/reactPhoto.git
 - run the code locally: npm run start
 - building for production: npm run build
 
