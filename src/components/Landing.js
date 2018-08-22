@@ -24,7 +24,7 @@ class Landing extends Component {
       <div key={key} className="col s4 m4">
         <div className="card">
           <div className="card-image" onClick={() => this.handleRedirect(key)}>
-            <img src={thumbnailUrl} />
+            <img alt={title} src={thumbnailUrl} />
           </div>
         </div>
       </div>

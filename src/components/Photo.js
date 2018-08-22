@@ -8,7 +8,7 @@ class Photo extends Component {
         <div key={title} className="col offset-s2 offset-m2 s8 m8 ">
           <div className="card">
             <div className="card-image">
-              <img src={url} />
+              <img src={url} alt={title} />
             </div>
             <div className="card-content">
               <p>{title}</p>
