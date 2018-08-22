@@ -33,20 +33,20 @@ class Landing extends Component {
   }
 
   render() {
-    const { photos } = this.props;
-    if (!photos) {
+    const { photoStore } = this.props;
+    if (!photoStore) {
       return (
         <div className="progress">
           <div className="indeterminate" />
         </div>
       );
     }
-    return this.renderCards(photos.photos);
+    return this.renderCards(photoStore.photos);
   }
 }
 
-function mapStateToProps({ photos }) {
-  return { photos: photos };
+function mapStateToProps({ photoStore }) {
+  return { photoStore: photoStore };
 }
 
 export default connect(

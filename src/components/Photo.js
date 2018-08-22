@@ -2,17 +2,10 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 class Photo extends Component {
-  render() {
-    if (!this.props.photos) {
-      return <div>Loading</div>;
-    }
-    const { photos, activePhoto } = this.props.photos;
-
-    const photoData = photos[activePhoto];
-    const { title, url } = photoData;
+  renderPhoto({ title, url }) {
     return (
       <div className="row">
-        <div key={activePhoto} className="col offset-s2 offset-m2 s8 m8 ">
+        <div key={title} className="col offset-s2 offset-m2 s8 m8 ">
           <div className="card">
             <div className="card-image">
               <img src={url} />
@@ -25,11 +18,20 @@ class Photo extends Component {
       </div>
     );
   }
+
+  render() {
+    if (!this.props.photoStore) {
+      return <div>Loading</div>;
+    }
+    const { photos, activePhoto } = this.props.photoStore;
+    const photoData = photos[activePhoto];
+    return this.renderPhoto(photoData);
+  }
 }
 
-function mapStateToProps({ photos }) {
+function mapStateToProps({ photoStore }) {
   return {
-    photos: photos
+    photoStore: photoStore
   };
 }
 export default connect(mapStateToProps)(Photo);
