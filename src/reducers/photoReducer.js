@@ -9,7 +9,12 @@ export default function(state = null, action) {
         previous[id] = photoNoId;
         return previous;
       }, {});
-      return { photos: objWithIdAsKey, activePhoto: 1 };
+      return {
+        photos: objWithIdAsKey,
+        // set the first photo as active, in case the user navigates
+        // directly to /photo
+        activePhoto: Object.keys(objWithIdAsKey)[0]
+      };
 
     case SET_ACTIVE_PHOTO:
       return { ...state, activePhoto: action.payload };

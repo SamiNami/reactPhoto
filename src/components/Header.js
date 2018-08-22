@@ -6,7 +6,7 @@ class Header extends Component {
     return (
       <nav>
         <div className="nav-wrapper">
-          <Link to={"/"} className="brand-logo">
+          <Link to={"/"} className="brand-logo center">
             Photo Collection
           </Link>
         </div>

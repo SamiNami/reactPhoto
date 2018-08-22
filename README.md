@@ -12,7 +12,7 @@ This is a training spec for a photo browsing web application. The goal the appli
 
 ### general requirements
 
-- [x]The application should use [JSONPlaceholder](http://jsonplaceholder.typicode.com) as a source for the photo content
+- [x] The application should use [JSONPlaceholder](http://jsonplaceholder.typicode.com) as a source for the photo content
 - [x] the application must use react
 - [x] the application must run on the latest chrome version
 - [x] get the images from [here](http://jsonplaceholder.typicode.com/photos)
