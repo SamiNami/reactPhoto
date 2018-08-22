@@ -1,4 +1,4 @@
-import { FETCH_PHOTOS } from "../actions/types";
+import { FETCH_PHOTOS, SET_ACTIVE_PHOTO } from "../actions/types";
 export default function(state = null, action) {
   switch (action.type) {
     case FETCH_PHOTOS:
@@ -9,7 +9,10 @@ export default function(state = null, action) {
         previous[id] = photoNoId;
         return previous;
       }, {});
-      return objWithIdAsKey;
+      return { photos: objWithIdAsKey, activePhoto: undefined };
+
+    case SET_ACTIVE_PHOTO:
+      return { ...state, activePhoto: action.payload };
     default:
       return state;
   }
