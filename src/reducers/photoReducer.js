@@ -11,7 +11,7 @@ export default function(state = null, action) {
       }, {});
       return {
         photos: objWithIdAsKey,
-        // set the first photo as active, in case the user navigates
+        // set the first photo as active, in case that the user navigates
         // directly to /photo
         activePhoto: Object.keys(objWithIdAsKey)[0]
       };

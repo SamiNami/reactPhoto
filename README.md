@@ -38,4 +38,4 @@ This is a training spec for a photo browsing web application. The goal the appli
   - [x] use [thunks](https://github.com/gaearon/redux-thunk)
 - [x] the demo is accessible on the internet
 - [x] the source code has a `README.MD` detailing how to run the code locally
-- [x] ES2017 syntax used in code
+- [x] ES2017 syntax used in code.
